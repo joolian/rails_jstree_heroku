@@ -14,18 +14,9 @@ Download [jsTree](https://github.com/vakata/jstree). All the files you need are 
 ###Javascript
 
 Copy jstree.js to vendor/assets/javascripts.
-To app/assets/javascripts/application.js add 
+To `app/assets/javascripts/application.js` add:
 ```
 //= require jstree 
 ```
-Script Name as Headline
-======
-**Script Name** is a script for things. The usage is explained like this:
-
-```
-$ ./script parameter1 .. parameterN
- Output
-$ 
-```
-## Version 
-* Version X.Y
+###CSS
+Rename 
