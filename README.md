@@ -13,10 +13,22 @@ Although a database connection is not necessary, the setup for PostgreSql has be
 Download [jsTree](https://github.com/vakata/jstree). All the files you need are in the dist folder of the download.
 ###Javascript
 
-Copy jstree.js to vendor/assets/javascripts.
+Copy `jstree.js` to `vendor/assets/javascripts`.
 To `app/assets/javascripts/application.js` add:
 ```
 //= require jstree 
 ```
+
+###Images
+Create a folder in 'assets/images' called `jstree-default` and then copy all the image files from `dist/themes/default` to the new folder.
+Repeat the same procedure with the image files from `dist/themes/default-dark`.
+
 ###CSS
-Rename 
+Copy `dist/themes/default/style.css` to `vendor/assets/stylesheets` and give it a unique name (e.g. `jstree-default.scss`) and change the extension to `.scss`.
+Now we need to point all references to image files in the scss file to the images in `assets/images` using the image-url helper.
+Change:
+```background-image: url("40px.png");```
+to:
+```background-image: image-url("jstree-default/40px.png");```
+
+If you want to make full use of SASS then replace all the require statements in `assets/stylesheets/application.css` with option statements and change the file extension of `application.css` to `.scss`. Otherwise add require statements for the edited style sheets.
