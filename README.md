@@ -11,10 +11,21 @@ Although a database connection is not necessary, the setup for PostgreSql has be
 
 ##Explanation
 Download [jsTree](https://github.com/vakata/jstree). All the files you need are in the dist folder of the download.
-#Javascript
+###Javascript
 
 Copy jstree.js to vendor/assets/javascripts.
 To app/assets/javascripts/application.js add 
-'''
+```
 //= require jstree 
-'''
+```
+Script Name as Headline
+======
+**Script Name** is a script for things. The usage is explained like this:
+
+```
+$ ./script parameter1 .. parameterN
+ Output
+$ 
+```
+## Version 
+* Version X.Y
