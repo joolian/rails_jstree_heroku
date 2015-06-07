@@ -20,15 +20,21 @@ To `app/assets/javascripts/application.js` add:
 ```
 
 ###Images
-Create a folder in 'assets/images' called `jstree-default` and then copy all the image files from `dist/themes/default` to the new folder.
+Create a folder in `assets/images` called `jstree-default` and then copy all the image files from `dist/themes/default` to the new folder.
 Repeat the same procedure with the image files from `dist/themes/default-dark`.
 
 ###CSS
 Copy `dist/themes/default/style.css` to `vendor/assets/stylesheets` and give it a unique name (e.g. `jstree-default.scss`) and change the extension to `.scss`.
-Now we need to point all references to image files in the scss file to the images in `assets/images` using the image-url helper.
+Now we need to point all references to image files in each of the themes `scss` files to the images in the `assets/images` folders using the image-url helper. For example, in `jstree-deafault-dark.scss`:
+
 Change:
-```background-image: url("40px.png");```
+```
+background-image: url("40px.png");
+```
 to:
-```background-image: image-url("jstree-default/40px.png");```
+```
+background-image: image-url("jstree-default-dark/40px.png");
+```
+Do not alter the url statements for encoded files().
 
 If you want to make full use of SASS then replace all the require statements in `assets/stylesheets/application.css` with option statements and change the file extension of `application.css` to `.scss`. Otherwise add require statements for the edited style sheets.
