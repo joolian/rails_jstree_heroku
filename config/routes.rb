@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'trees/basic_html'
+  
+  root 'trees#basic_html'
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
